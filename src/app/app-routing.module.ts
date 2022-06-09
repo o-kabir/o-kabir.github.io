@@ -7,14 +7,14 @@ import { RouterModule, Routes } from '@angular/router';
       RouterModule.forRoot([
       
       {
-        path: '',
+        path: 'home',
         loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), //Lazy load account module
 
       },
      
       {
         path: '**',
-        redirectTo: '',
+        redirectTo: 'home',
         pathMatch: 'full'
       }
     ])
