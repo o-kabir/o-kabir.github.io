@@ -1,18 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
 
+$textColor:#fff;
+$backgroundColor:#000;
+$fontSize:1rem;
+$fontFamily:'Poppins',
+sans-serif;
+$cursorPointer:pointer;
+$primaryColor:#FF4900;
+$fontWeight300:300;
+$fontWeight400:400;
+$fontWeight500:500;
+$fontWeight600:600;
+$fontWeight700:700;
+$fontWeight800:800;
+$fontWeight900:900;
+@mixin defualtStyle {
+    background-color: $backgroundColor !important;
+    color: $textColor;
+    font-size: $fontSize;
+}
+
+@mixin d-flexStyle($displayContent:center) {
+    display: flex;
+    align-items: center;
+    justify-content: $displayContent;
+}
+
+@mixin containerSize {
+    max-width: 75.5% !important;
+}
+
 html,
 body {
     height: 100%;
+    @include defualtStyle();
 }
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+a {
+    color: $textColor;
+    font-family: $fontFamily;
+}
+
+ul {
+    padding-left: 0rem;
+    margin-bottom: 1rem;
+    li {
+        list-style: none;
+    }
+}
+
+.container {
+    @include containerSize();
 }
 
 
 /* Importing Bootstrap SCSS file. */
 
 @import '~bootstrap/scss/bootstrap';
-$textcolor:#fff;
-$background-color:#000;

@@ -1,0 +1,12 @@
+@import "../../../../styles.scss";
+header#top-header {
+    margin-top: 3%;
+}
+
+#top-header .container {
+    max-width: 100% !important;
+}
+
+#top-header img {
+    cursor: $cursorPointer;
+}

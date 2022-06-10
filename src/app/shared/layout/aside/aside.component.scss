@@ -1,0 +1,10 @@
+@import "../../../../styles.scss";
+.top-menu {
+    @include d-flexStyle($displayContent: end);
+}
+
+.top-menu li {
+    font-size: 1.125rem;
+    margin: 0rem 1rem;
+    cursor: $cursorPointer;
+}

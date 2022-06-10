@@ -1,0 +1,52 @@
+@import "../../../styles.scss";
+#home-intro-section {
+    @include d-flexStyle();
+}
+
+.home-intro {
+    flex-basis: 57%;
+}
+
+.home-intro-img {
+    flex-basis: 43%;
+    text-align: right;
+}
+
+.home-intro-img img {
+    width: 100%;
+}
+
+.home-intro h1 {
+    font-size: 5rem;
+}
+
+.intro-tooltip {
+    background-color: $primaryColor;
+    width: 12.438rem;
+    height: 4rem;
+    @include d-flexStyle();
+    font-size: 1.375rem;
+    font-weight: $fontWeight300;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.intro-tooltip::after {
+    content: "";
+    position: absolute;
+    @include d-flexStyle();
+    clip-path: polygon(54% 74%, 73% 75%, 74% 75%, 74% 74%, 61% 100%, 50% 75%, 49% 76%);
+    width: 26%;
+    height: 45%;
+    background-color: $primaryColor;
+    top: 65%;
+    left: 34%;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.375rem;
+    font-weight: $fontWeight300;
+}
